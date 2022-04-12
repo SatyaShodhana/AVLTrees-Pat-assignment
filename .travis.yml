@@ -4,4 +4,6 @@ jdk:
   - oraclejdk15
 
 script:
-  - mvn clean test
+  - mvn clean
+  - mvn clean jacoco:prepare-agent install jacoco:report
+  - mvn test jacoco:report
